@@ -39,8 +39,8 @@ port 1194
 proto tcp
 dev tun
 ca ca.crt
-cert KEVIN DONI.crt
-key KEVIN DONI.key
+cert EMBEX.crt
+key EMBEX.key
 dh dh2048.pem
 plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so login
 verify-client-cert none
@@ -54,7 +54,7 @@ keepalive 5 30
 comp-lzo
 persist-key
 persist-tun
-status KEVIN DONI-tcp-1194.log
+status EMBEX-tcp-1194.log
 verb 3
 END
 
@@ -64,8 +64,8 @@ port 2200
 proto udp
 dev tun
 ca ca.crt
-cert KEVIN DONI.crt
-key KEVIN DONI.key
+cert EMBEX.crt
+key EMBEX.key
 dh dh2048.pem
 plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so login
 verify-client-cert none
@@ -79,7 +79,7 @@ keepalive 5 30
 comp-lzo
 persist-key
 persist-tun
-status KEVIN DONI-udp-2200.log
+status EMBEX-udp-2200.log
 verb 3
 END
 
@@ -104,14 +104,14 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
 # Konfigurasi dan Setting untuk Client
 mkdir clientconfig
-cp /etc/openvpn/{KEVIN DONI.crt,KEVIN DONI.key,ca.crt,ta.key} clientconfig/
+cp /etc/openvpn/{KEVIN DONI.crt,EMBEX.key,ca.crt,ta.key} clientconfig/
 cd clientconfig
 
 # Buat config client UDP 1194
 cd /etc/openvpn
 cat > /etc/openvpn/client-udp-1194.ovpn <<-END
 ############## WELCOME TO ###############
-########## WWW.LOSESERVER.XYZ ###########
+########## WWW.EMBEX.ONLINE ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -132,7 +132,7 @@ sed -i $MYIP2 /etc/openvpn/client-udp-1194.ovpn;
 # Buat config client TCP 1194
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
 ############## WELCOME TO ###############
-########## WWW.KEVIN DONI.XYZ ###########
+########## WWW.EMBEX.ONLINE ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -153,7 +153,7 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
 # Buat config client UDP 2200
 cat > /etc/openvpn/client-udp-2200.ovpn <<-END
 ############## WELCOME TO ###############
-########## WWW.KEVIN DONI.XYZ ###########
+########## WWW.EMBEX.ONLINE ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -174,7 +174,7 @@ sed -i $MYIP2 /etc/openvpn/client-udp-2200.ovpn;
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-tcp-2200.ovpn <<-END
 ############## WELCOME TO ###############
-########## WWW.KEVIN DONI.XYZ ###########
+########## WWW.EMBEX.ONLINE ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -195,7 +195,7 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-2200.ovpn;
 # Buat config client SSL
 cat > /etc/openvpn/client-tcp-ssl.ovpn <<-END
 ############## WELCOME TO ###############
-########## WWW.KEVIN DONI.XYZ ###########
+########## WWW.EMBEX.ONLINE ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
