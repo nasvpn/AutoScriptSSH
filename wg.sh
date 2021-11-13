@@ -89,11 +89,11 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O addwg "https://raw.githubusercontent.com/kevindoni/AutoScriptSSH/main/addwg.sh"
-wget -O delwg "https://raw.githubusercontent.com/kevindoni/AutoScriptSSH/main/delwg.sh"
-wget -O cekwg "https://raw.githubusercontent.com/kevindoni/AutoScriptSSH/main/cekwg.sh"
-wget -O xp-wg "https://raw.githubusercontent.com/kevindoni/AutoScriptSSH/main/xp-wg.sh"
-wget -O renewwg "https://raw.githubusercontent.com/kevindoni/AutoScriptSSH/main/renewwg.sh"
+wget -O addwg "https://raw.githubusercontent.com/nasvpn/AutoScriptSSH/main/addwg.sh"
+wget -O delwg "https://raw.githubusercontent.com/nasvpn/AutoScriptSSH/main/delwg.sh"
+wget -O cekwg "https://raw.githubusercontent.com/nasvpn/AutoScriptSSH/main/cekwg.sh"
+wget -O xp-wg "https://raw.githubusercontent.com/nasvpn/AutoScriptSSH/main/xp-wg.sh"
+wget -O renewwg "https://raw.githubusercontent.com/nasvpn/AutoScriptSSH/main/renewwg.sh"
 chmod +x addwg
 chmod +x delwg
 chmod +x cekwg
